@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background: linear-gradient(45deg, #ff6a85, #ff99ac, #ffccd5, #ff6a85);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+body {
+    font-family: 'Dancing Script', cursive; /* Replace 'Dancing Script' with your chosen font */
+}
+h1{
+    font-size:250%;
+}
+
+.container {
+    padding: 20px;
+}
+
+#banner {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+}
+
+
+.scrolling-wrapper {
+    display: flex; /* Changed to flex for better alignment */
+    animation: scrollBanner 30s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-150%); /* Since images are duplicated, -50% will start the repeat */
+    }
+}
+
+#banner img {
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    display: inline-block;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button#noButton {
+    transition: transform 0.5s ease; /* Adjust time and easing as needed */
+    position: relative; /* Needed for correct positioning */
+}
+
+
+button:hover {
+    background-color: darkred;
+}
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f00; /* Red color */
+    border-radius: 50%; /* Makes it round */
+}
+#leftGif, #rightGif {
+    position: absolute;
+    top: 0;
+    height: 50%;
+}
+
+#leftGif {
+    left: 0;
+}
+
+#rightGif {
+    right: 0;
+}
+
+#leftGif img, #rightGif img {
+    height: 100%; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+
+/* Existing styles */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Styles for tablets and smaller devices */
+    body {
+        font-size: 14px; /* Smaller font size */
+        padding: 10px; /* Adjust padding */
+    }
+
+    #banner {
+        height: 150px; /* Smaller banner for smaller screens */
+    }
+
+    #banner img {
+        width: 150px; /* Adjust image size */
+    }
+
+    button {
+        font-size: 14px; /* Smaller buttons */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+
+    /* Add any other responsive adjustments here */
+}
+
+@media (max-width: 480px) {
+    /* Styles for mobile phones */
+    body {
+        font-size: 12px; /* Even smaller font size for mobiles */
+    }
+
+    #banner {
+        height: 100px; /* Smaller banner for mobile screens */
+    }
+
+    #banner img {
+        width: 100px; /* Smaller images for mobile */
+    }
+
+    button {
+        font-size: 12px; /* Smaller buttons for mobile */
+        padding: 6px 12px; /* Adjust button padding for mobile */
+    }
+
+    /* Add any other mobile-specific adjustments here */
+}
+#poemContainer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.poem {
+    display: none;
+}
